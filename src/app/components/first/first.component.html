@@ -1,0 +1,21 @@
+<div [class]="miClases">
+  <p>
+    <input
+      (keydown.shift.space)="poneMayuscula($event)"
+      [(ngModel)]="nombre"
+      placeholder="Nombre"
+    />
+  </p>
+  <p>
+    <button (click)="decrementaEdad()">-</button>
+    <span> {{ edad }} años </span>
+    <button (click)="incrementaEdad()">+</button>
+  </p>
+
+  <div [style.color]="this.edad < 18 ? 'red' : 'green'">Validando edad...</div>
+
+  <button (click)="resetea()">Resetear</button>
+  <button [disabled]="edad < 18 || !this.nombre.trim()" (click)="inserta()">
+    Insertar
+  </button>
+</div>

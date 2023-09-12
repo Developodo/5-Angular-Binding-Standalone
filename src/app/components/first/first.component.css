@@ -1,0 +1,14 @@
+.normal {
+  border: 1px solid gray;
+}
+.incrementa {
+  border: 2px solid green;
+}
+.decrementa {
+  border: 2px solid red;
+}
+.contenedor {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
